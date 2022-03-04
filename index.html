@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" type="text/css" href="https://codemirror.net/lib/codemirror.css">
+    <link rel="stylesheet" type="text/css" href="https://codemirror.net/theme/dracula.css"> -->
+    <link rel="stylesheet" href="codemirror/lib/codemirror.css">
+    <link rel="stylesheet" href="codemirror/theme/dracula.css">
+    <link rel="stylesheet" href="codemirror/theme/3024-day.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Codepedia</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="left">
+            <h1 class="left-heading">Emoji</h1>
+            <div class="leftbox">
+                <div class="emoji" id="emoji1">💨</div>
+                <div class="textcontent">Initaialze variables</div>
+            </div>
+            <div class="leftbox">
+                <div class="emoji" id="emoji2">💬</div>
+                <div class="textcontent">Comment</div>
+            </div>
+            <div class="leftbox">
+                <div class="emoji" id="emoji3">🤗</div>
+                <div class="textcontent">Print statement</div>
+            </div>
+            <div class="leftbox">
+                <div class="emoji" id="emoji4">🧐</div>
+                <div class="textcontent">If statement</div>
+            </div>
+            <div class="leftbox">
+                <div class="emoji" id="emoji5">😎</div>
+                <div class="textcontent">Else statement</div>
+            </div>
+            <div class="leftbox">
+                <div class="emoji" id="emoji6">😎🧐</div>
+                <div class="textcontent">Else If statement</div>
+            </div>
+            <div class="leftbox">
+                <div class="emoji" id="emoji7">👉</div>
+                <div class="textcontent">Open Curly Bracket</div>
+            </div>
+            <div class="leftbox">
+                <div class="emoji" id="emoji8">👈</div>
+                <div class="textcontent">Closing Curly Bracket</div>
+            </div>
+            <div class="leftbox">
+                <div class="emoji" id="emoji9">🔁</div>
+                <div class="textcontent">Loop statement</div>
+            </div>
+            <div class="leftbox">
+                <div class="emoji" id="emoji10">🏡</div>
+                <div class="textcontent">Define Function</div>
+            </div>
+            <div class="leftbox">
+                <div class="emoji" id="emoji11">😊</div>
+                <div class="textcontent">Return statement</div>
+            </div>
+
+        </div>
+        <div class="right">
+            <div class="rightbar">
+                <button class="icon" id="reload">
+                    Reload
+                </button>
+                <button class="icon" id="Run">
+                    Run
+                </button>
+                <button class="icon" id="Code">
+                    <span>Code</span>
+                </button>
+                <!-- <button class="icon" id="import">
+                    Import
+                </button>
+                <button class="icon" id="export">
+                    Export
+                    <a id="exportAnchorElem" style="display:none"></a>
+                </button>
+                <button class="icon" id="save">
+                    Save
+                </button> -->
+            </div>
+            <textarea class="textarea" id="textarea" name="textarea"></textarea>
+            <!-- /********************************/ -->
+            <div class="rightbox rightbox-close" id="rightbox">
+                <div class="second second-close" id="rightbox-second">
+                    <div class="first">
+                        <i class="fa-solid fa-arrow-left" id="rightbox-arrow"></i>
+                    </div>
+                    <textarea class="right-textarea" id="right-textarea" name="right-textarea"></textarea>
+                </div>
+            </div>
+            <div id="myLog" class="myLog">
+                <span><i class="fa-solid fa-circle-xmark" id="removeIcon"></i></span>
+                <p class="mylog" id="mylog"></p>
+            </div>
+            <!-- <div class="visible" id="console-window">
+                <button id="cross-console" class="cross">
+                    <div>+</div>
+                </button>
+                <iframe id="console">
+                </iframe>
+            </div> -->
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/8e11d5afe3.js" crossorigin="anonymous"></script>
+    <!-- <script language="javascript" type="text/javascript" src="https://codemirror.net/lib/codemirror.js"></script>
+    <script language="javascript" type="text/javascript" src="https://codemirror.net/mode/perl/perl.js"></script> -->
+    <script src="codemirror/lib/codemirror.js"></script>
+    <script language="javascript" type="text/javascript" src="codemirror/mode/javascript/javascript.js"></script>
+    <!-- <script language="javascript" type="text/javascript" src="codemirror/mode/perl/perl.js"></script> -->
+    <script src="./main.js"></script>
+</body>
+
+</html>

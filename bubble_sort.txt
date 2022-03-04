@@ -1,0 +1,20 @@
+💬 this is declartion of the variables
+💨 a=[5,2,4,1,3,6,8,7,9,10],i,j,t;
+💬
+🔁(i,0,9,i++)
+👉
+ 🔁(j,i+1,9,j++)
+ 👉
+   🧐(a[i]>a[j])
+   👉
+     t=a[i];
+     a[i]=a[j];
+     a[j]=t;
+   👈
+ 👈
+👈
+💬 print the value of array after sorting
+🔁(i,0,9,i++)
+👉
+ 🤗(a[i]);
+👈

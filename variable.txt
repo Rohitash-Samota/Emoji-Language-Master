@@ -1,0 +1,18 @@
+💨 this is for the varibale declaration
+💬 this is for the comment
+🤗 this is for print
+🧐 this is for if statement
+😎 this is for else statement  
+👉 this is for open curly braces
+👈 this is for clsingcurly braces
+/*************************
+🔁 this is for for loop
+1. syntax for for loop is
+🔁(variable,start,end,i+=2)
+2. we can also write like this
+🔁(variable,start,end,)
+but we have to provide the info regarding updation of the variable should be decalre in the loop body
+/*************************/
+🏡this is for the function
+
+😊 for return

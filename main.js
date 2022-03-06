@@ -1,4 +1,5 @@
 var jscode = "";
+var isConsole = false;
 var editor = CodeMirror.fromTextArea(document.getElementById('textarea'), {
     lineNumbers: true,
     mode: 'xml',
@@ -118,6 +119,7 @@ function jsconvertor() {
                     jscode += append;
                 }
                 append = 'console.log'
+                isConsole = true;
                 // flag = false;
                 flag = true;
             }
@@ -154,6 +156,45 @@ function jsconvertor() {
                     jscode += append;
                 }
                 append = '}'
+                flag = true;
+            }
+            else if (c == '👆') {
+                if (append != '') {
+                    if (append.includes('🔁')) {
+                        let anotherappend = forfunction(append);
+                        append = anotherappend;
+                    }
+                    // fs.appendFileSync("index1.js", append, (err) => {
+                    //     if (err) throw err;
+                    // });
+                    jscode += append;
+                }
+                if (isConsole == true) {
+                    append = '("'
+                }
+                else {
+                    append = '(';
+                }
+                flag = true;
+            }
+            else if (c == '☝') {
+                if (append != '') {
+                    if (append.includes('🔁')) {
+                        let anotherappend = forfunction(append);
+                        append = anotherappend;
+                    }
+                    // fs.appendFileSync("index1.js", append, (err) => {
+                    //     if (err) throw err;
+                    // });
+                    jscode += append;
+                }
+                if (isConsole == true) {
+                    append = '")';
+                    isConsole = false;
+                }
+                else {
+                    append = ')'
+                }
                 flag = true;
             }
             else if (c == '😎') {
@@ -310,6 +351,45 @@ document.getElementById('Code').addEventListener("click", () => {
                 append = '}'
                 flag = true;
             }
+            else if (c == '👆') {
+                if (append != '') {
+                    if (append.includes('🔁')) {
+                        let anotherappend = forfunction(append);
+                        append = anotherappend;
+                    }
+                    // fs.appendFileSync("index1.js", append, (err) => {
+                    //     if (err) throw err;
+                    // });
+                    jscode += append;
+                }
+                if (isConsole == true) {
+                    append = '("'
+                }
+                else {
+                    append = '(';
+                }
+                flag = true;
+            }
+            else if (c == '☝') {
+                if (append != '') {
+                    if (append.includes('🔁')) {
+                        let anotherappend = forfunction(append);
+                        append = anotherappend;
+                    }
+                    // fs.appendFileSync("index1.js", append, (err) => {
+                    //     if (err) throw err;
+                    // });
+                    jscode += append;
+                }
+                if (isConsole == true) {
+                    append = '")';
+                    isConsole = false;
+                }
+                else {
+                    append = ')'
+                }
+                flag = true;
+            }
             else if (c == '😎') {
                 if (append != '') {
                     // fs.appendFileSync("index1.js", append, (err) => {
@@ -382,6 +462,7 @@ document.getElementById('Code').addEventListener("click", () => {
         // })
         jscode += '\n';
     }
+    jsconvertor();
     const myTimeout = setTimeout(delay, 100);
     righteditor.setValue("");
     righteditor.setValue(jscode)
@@ -423,7 +504,7 @@ document.getElementById('emoji6').addEventListener('click', () => {
     copytoclipboard('😎🧐');
 })
 document.getElementById('emoji7').addEventListener('click', () => {
-    copytoclipboard('👉');
+    copytoclipboard('👉👈');
 })
 document.getElementById('emoji8').addEventListener('click', () => {
     copytoclipboard('👈');
@@ -436,6 +517,13 @@ document.getElementById('emoji10').addEventListener('click', () => {
 })
 document.getElementById('emoji11').addEventListener('click', () => {
     copytoclipboard('😊');
+})
+document.getElementById('emoji12').addEventListener('click', () => {
+    copytoclipboard('👆☝');
+})
+
+document.getElementById('emoji13').addEventListener('click', () => {
+    copytoclipboard('☝');
 })
 
 function forfunction(string) {
